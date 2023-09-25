@@ -1,0 +1,117 @@
+{
+	"info": {
+		"_postman_id": "1b30e4dc-8522-4857-8336-a4480df5b427",
+		"name": "valere-brightree-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7840765"
+	},
+	"item": [
+		{
+			"name": "Create New Referral",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"adacf570-b087-44d0-83a6-0e45b7468a75\",\n    \"originatorOrderId\": 1457,\n    \"originatorId\": \"856ec154-9fde-43a6-85f9-426c9f0c5286\",\n    \"originatorFacility\": {\n        \"name\": \"facility1\",\n        \"id\": 123\n    },\n    \"integratorFacility\": {\n        \"name\": \"facility2\",\n        \"id\": 321\n    },\n    \"createdAt\": \"2022-12-11T11:02:08+0000\",\n    \"patient\": {\n        \"id\": \"9dfb03e0-5643-4225-ad06-97439ddbf1a0\",\n        \"firstName\": \"Alana\",\n        \"lastName\": \"Dejesus\",\n        \"addressLine1\": \"964 Lake Street\",\n        \"addressLine2\": \"430 Concord Street\",\n        \"city\": \"Chical\",\n        \"state\": \"MA\",\n        \"zipCode\": 8125,\n        \"country\": \"USA\",\n        \"dateOfBirth\": \"1991-11-25\",\n        \"deceased\": false,\n        \"gender\": \"female\",\n        \"cellPhoneNumber\": \"(970) 551-2573\",\n        \"language\": \"english\"\n    },\n    \"prescriber\": {\n        \"npi\": 6443064417,\n        \"firstName\": \"Boyer\",\n        \"lastName\": \"Klein\"\n    },\n    \"products\": [\n        {\n            \"id\": 239,\n            \"type\": \"BreastPump\",\n            \"description\": \"Double Electric Breast Pump Kit Freestyle Flex\"\n        }\n    ],\n    \"documents\": [\n        {\n            \"id\": 123,\n            \"type\": \"test document\",\n            \"content\": \"JVBERi0xLjcNCiW1tbW1DQoxIDAgb2JqDQo8PC9UeXBlL0NhdGFsb2cvUGFnZXMgMiAwIFIvTGFuZyhlbi1VUykgL1N0cnVjdFRyZWVSb290IDEwIDAgUi9NYXJrSW5mbzw8L01hcmtlZCB0cnVlPj4vTWV0YWRhdGEgMTkgMCBSL1ZpZXdlclByZWZlcmVuY2VzIDIwIDAgUj4+DQplbmRvYmoNCjIgMCBvYmoNCjw8L1R5cGUvUGFnZXMvQ291bnQgMS9LaWRzWyAzIDAgUl0gPj4NCmVuZG9iag0KMyAwIG9iag0KPDwvVHlwZS9QYWdlL1BhcmVudCAyIDAgUi9SZXNvdXJjZXM8PC9Gb250PDwvRjEgNSAwIFI+Pi9FeHRHU3RhdGU8PC9HUzcgNyAwIFIvR1M4IDggMCBSPj4vUHJvY1NldFsvUERGL1RleHQvSW1hZ2VCL0ltYWdlQy9JbWFnZUldID4+L01lZGlhQm94WyAwIDAgNjEyIDc5Ml0gL0NvbnRlbnRzIDQgMCBSL0dyb3VwPDwvVHlwZS9Hcm91cC9TL1RyYW5zcGFyZW5jeS9DUy9EZXZpY2VSR0I+Pi9UYWJzL1MvU3RydWN0UGFyZW50cyAwPj4NCmVuZG9iag0KNCAwIG9iag0KPDwvRmlsdGVyL0ZsYXRlRGVjb2RlL0xlbmd0aCAxNzI+Pg0Kc3RyZWFtDQp4nJ2OTQuCQBRF9w/mP9zlTJDOjKkJ4sKPpEAoGmgRrcpcaZT2/xvFRW17i8c7cHn3wN0jjt0q2+aQSYI0z/BkJB05TqQ0JAK7w0jjVTM6LdAxSg0jd6OgJcydkbIhCYu+dBRCqRytYVqbKY8hmt7+QzPReqaS0ZkPtVhq3g9ixXF7XMXS5+9WeLwer24QF5gdo8J2HRj9LeUFyom+pSaXWQG/JSiqDB/hZDZgDQplbmRzdHJlYW0NCmVuZG9iag0KNSAwIG9iag0KPDwvVHlwZS9Gb250L1N1YnR5cGUvVHJ1ZVR5cGUvTmFtZS9GMS9CYXNlRm9udC9UaW1lc05ld1JvbWFuUFNNVC9FbmNvZGluZy9XaW5BbnNpRW5jb2RpbmcvRm9udERlc2NyaXB0b3IgNiAwIFIvRmlyc3RDaGFyIDMyL0xhc3RDaGFyIDExNy9XaWR0aHMgMTggMCBSPj4NCmVuZG9iag0KNiAwIG9iag0KPDwvVHlwZS9Gb250RGVzY3JpcHRvci9Gb250TmFtZS9UaW1lc05ld1JvbWFuUFNNVC9GbGFncyAzMi9JdGFsaWNBbmdsZSAwL0FzY2VudCA4OTEvRGVzY2VudCAtMjE2L0NhcEhlaWdodCA2OTMvQXZnV2lkdGggNDAxL01heFdpZHRoIDI2MTQvRm9udFdlaWdodCA0MDAvWEhlaWdodCAyNTAvTGVhZGluZyA0Mi9TdGVtViA0MC9Gb250QkJveFsgLTU2OCAtMjE2IDIwNDYgNjkzXSA+Pg0KZW5kb2JqDQo3IDAgb2JqDQo8PC9UeXBlL0V4dEdTdGF0ZS9CTS9Ob3JtYWwvY2EgMT4+DQplbmRvYmoNCjggMCBvYmoNCjw8L1R5cGUvRXh0R1N0YXRlL0JNL05vcm1hbC9DQSAxPj4NCmVuZG9iag0KOSAwIG9iag0KPDwvQXV0aG9yKE1haG1vb2QgSG9zc2VpbmkpIC9DcmVhdG9yKE1pY3Jvc29mdCBXb3JkKSAvQ3JlYXRpb25EYXRlKEQ6MjAyMjEyMTIwMzU3MTkrMDAnMDAnKSAvTW9kRGF0ZShEOjIwMjIxMjEyMDM1NzE5KzAwJzAwJykgPj4NCmVuZG9iag0KMTcgMCBvYmoNCjw8L1R5cGUvT2JqU3RtL04gNy9GaXJzdCA0Ni9GaWx0ZXIvRmxhdGVEZWNvZGUvTGVuZ3RoIDI5Nj4+DQpzdHJlYW0NCnicbVHRasIwFH0X/If7B7exrWMgwpjKhlhKK+yh+BDrXQ22iaQp6N8vd+2wA1/COTfnnJwkIoYARASxAOFBEIPw6HUOYgZROAMRQhT74RyilwAWC0xZHUCGOaa4v18Jc2e70q1ranBbQHAATCsIWbNcTie9JRgsK1N2DWn3zCm4SnaAwTVS7C1RZozDzNS0k1fuyHmptD6Ld7kuTzgm6mNGuwnd3JbuIIbojc/SxhEmvKz16UH2Xno0N8ypdPhB8kS2x+z5w5+6Vprys+SGPHjTPkE6ZfTArVPf0oNf9mXs5WjM5XF7nrRnIsclHe5kac2Iv5/9OuIrJWtTjQZ5rU400vbneFllZYMbVXWWhrsmXdMW/Mfzf6+byIbaoqePp59OfgBUCqK7DQplbmRzdHJlYW0NCmVuZG9iag0KMTggMCBvYmoNClsgMjUwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDQ0NCA1MDAgNDQ0IDAgMCAwIDAgMCAwIDAgNzc4IDUwMCA1MDAgMCAwIDAgMzg5IDI3OCA1MDBdIA0KZW5kb2JqDQoxOSAwIG9iag0KPDwvVHlwZS9NZXRhZGF0YS9TdWJ0eXBlL1hNTC9MZW5ndGggMzAwOT4+DQpzdHJlYW0NCjw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+PHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iMy4xLTcwMSI+CjxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+CjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiICB4bWxuczpwZGY9Imh0dHA6Ly9ucy5hZG9iZS5jb20vcGRmLzEuMy8iPgo8L3JkZjpEZXNjcmlwdGlvbj4KPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyI+CjxkYzpjcmVhdG9yPjxyZGY6U2VxPjxyZGY6bGk+TWFobW9vZCBIb3NzZWluaTwvcmRmOmxpPjwvcmRmOlNlcT48L2RjOmNyZWF0b3I+PC9yZGY6RGVzY3JpcHRpb24+CjxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiICB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iPgo8eG1wOkNyZWF0b3JUb29sPk1pY3Jvc29mdCBXb3JkPC94bXA6Q3JlYXRvclRvb2w+PHhtcDpDcmVhdGVEYXRlPjIwMjItMTItMTJUMDM6NTc6MTkrMDA6MDA8L3htcDpDcmVhdGVEYXRlPjx4bXA6TW9kaWZ5RGF0ZT4yMDIyLTEyLTEyVDAzOjU3OjE5KzAwOjAwPC94bXA6TW9kaWZ5RGF0ZT48L3JkZjpEZXNjcmlwdGlvbj4KPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIj4KPHhtcE1NOkRvY3VtZW50SUQ+dXVpZDpBQUI1NjgzOS1FNkMyLTQxMzAtQjU5Qy01MzAzNDc1RDFDMUI8L3htcE1NOkRvY3VtZW50SUQ+PHhtcE1NOkluc3RhbmNlSUQ+dXVpZDpBQUI1NjgzOS1FNkMyLTQxMzAtQjU5Qy01MzAzNDc1RDFDMUI8L3htcE1NOkluc3RhbmNlSUQ+PC9yZGY6RGVzY3JpcHRpb24+CiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAKICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIAo8L3JkZjpSREY+PC94OnhtcG1ldGE+PD94cGFja2V0IGVuZD0idyI/Pg0KZW5kc3RyZWFtDQplbmRvYmoNCjIwIDAgb2JqDQo8PC9EaXNwbGF5RG9jVGl0bGUgdHJ1ZT4+DQplbmRvYmoNCjIxIDAgb2JqDQo8PC9UeXBlL1hSZWYvU2l6ZSAyMS9XWyAxIDQgMl0gL1Jvb3QgMSAwIFIvSW5mbyA5IDAgUi9JRFs8Mzk2OEI1QUFDMkU2MzA0MUI1OUM1MzAzNDc1RDFDMUI+PDM5NjhCNUFBQzJFNjMwNDFCNTlDNTMwMzQ3NUQxQzFCPl0gL0ZpbHRlci9GbGF0ZURlY29kZS9MZW5ndGggODE+Pg0Kc3RyZWFtDQp4nC3Luw2AMAyE4XNe1CiLIjEEmyD2oQVKWCJSMHe48FfYP+DTu/kegY9VXMRuEg4SF5JmsYnT78yDiCKJLEz8n8W7PDEvjQw7qQ/wAtSuC9kNCmVuZHN0cmVhbQ0KZW5kb2JqDQp4cmVmDQowIDIyDQowMDAwMDAwMDEwIDY1NTM1IGYNCjAwMDAwMDAwMTcgMDAwMDAgbg0KMDAwMDAwMDE2NiAwMDAwMCBuDQowMDAwMDAwMjIyIDAwMDAwIG4NCjAwMDAwMDA0ODYgMDAwMDAgbg0KMDAwMDAwMDczMiAwMDAwMCBuDQowMDAwMDAwOTAzIDAwMDAwIG4NCjAwMDAwMDExMzkgMDAwMDAgbg0KMDAwMDAwMTE5MiAwMDAwMCBuDQowMDAwMDAxMjQ1IDAwMDAwIG4NCjAwMDAwMDAwMTEgNjU1MzUgZg0KMDAwMDAwMDAxMiA2NTUzNSBmDQowMDAwMDAwMDEzIDY1NTM1IGYNCjAwMDAwMDAwMTQgNjU1MzUgZg0KMDAwMDAwMDAxNSA2NTUzNSBmDQowMDAwMDAwMDE2IDY1NTM1IGYNCjAwMDAwMDAwMTcgNjU1MzUgZg0KMDAwMDAwMDAwMCA2NTUzNSBmDQowMDAwMDAxNzg4IDAwMDAwIG4NCjAwMDAwMDIwMDMgMDAwMDAgbg0KMDAwMDAwNTA5NSAwMDAwMCBuDQowMDAwMDA1MTQwIDAwMDAwIG4NCnRyYWlsZXINCjw8L1NpemUgMjIvUm9vdCAxIDAgUi9JbmZvIDkgMCBSL0lEWzwzOTY4QjVBQUMyRTYzMDQxQjU5QzUzMDM0NzVEMUMxQj48Mzk2OEI1QUFDMkU2MzA0MUI1OUM1MzAzNDc1RDFDMUI+XSA+Pg0Kc3RhcnR4cmVmDQo1NDIwDQolJUVPRg0KeHJlZg0KMCAwDQp0cmFpbGVyDQo8PC9TaXplIDIyL1Jvb3QgMSAwIFIvSW5mbyA5IDAgUi9JRFs8Mzk2OEI1QUFDMkU2MzA0MUI1OUM1MzAzNDc1RDFDMUI+PDM5NjhCNUFBQzJFNjMwNDFCNTlDNTMwMzQ3NUQxQzFCPl0gL1ByZXYgNTQyMC9YUmVmU3RtIDUxNDA+Pg0Kc3RhcnR4cmVmDQo2MDE1DQolJUVPRg==\",\n            \"createdAt\": \"2022-11-11T11:02:08+0000\"\n        }\n    ],\n    \"submitter\": {\n        \"firstName\": \"SubmitterFirst\",\n        \"lastName\": \"SubmitterLast\"\n    },\n    \"hcpcs\": [\n        \"E0603\"\n    ],\n    \"diagnosisCodes\": [\n        \"Z391\"\n    ],\n    \"notes\": [\n        \"Delivered by testShipper\"\n    ],\n    \"requestedDeliveryDate\": \"2023-01-24\",\n    \"requestedDeliveryTime\": \"10:00\",\n    \"actualDeliveryDate\": \"2022-12-12\",\n    \"actualDeliveryTime\": \"10:00\",\n    \"status\": \"Delivered\",\n    \"placeOfService\": \"Inpatient Hospital\",\n    \"printAmountOnDeliveryTicket\": true,\n    \"marketingRep\": 123,\n    \"marketingReferral\": 234\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/referral",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"referral"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Document to Existing Referral",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"testId\",\n    \"content\": \"testContent\",\n    \"type\": \"testType\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/referral/adacf570-b087-44d0-83a6-0e45b7468a75/document",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"referral",
+						"adacf570-b087-44d0-83a6-0e45b7468a75",
+						"document"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Referral Status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server}}/api/referral/adacf570-b087-44d0-83a6-0e45b7468a75/status",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"referral",
+						"adacf570-b087-44d0-83a6-0e45b7468a75",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Existing Referral Status",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ReferralStatus\": \"Accepted\",\n    \"RejectionReason\": null,\n    \"ReferralSalesOrder\": {\n        \"SalesOrderKey\": 111248,\n        \"SalesOrderStatus\": \"Delivered\",\n        \"Tracking\": [\n            {\n                \"TrackingNumber\": \"PostOffice1001\",\n                \"ShipDate\": \"2020-05-12T09:20:50.203\",\n                \"Carrier\": {\n                    \"ID\": 4,\n                    \"Value\": \"USPS\"\n                }\n            },\n            {\n                \"TrackingNumber\": \"1Z0001\",\n                \"ShipDate\": \"2020-05-12T09:21:08.663\",\n                \"Carrier\": {\n                    \"ID\": 3,\n                    \"Value\": \"FEDEX\"\n                }\n            }\n        ]\n    },\n    \"ReferralPatient\": {\n        \"BrightreeId\": 23747,\n        \"PatientId\": 23652,\n        \"PatientFullName\": \"Wight, Alex\"\n    },\n    \"SleepTherapies\": []\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}/api/site/{{siteNickname}}/referral/0/updatestatus",
+					"host": [
+						"{{server}}"
+					],
+					"path": [
+						"api",
+						"site",
+						"{{siteNickname}}",
+						"referral",
+						"0",
+						"updatestatus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

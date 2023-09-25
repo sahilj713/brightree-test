@@ -1,0 +1,16 @@
+{
+  "type": "module",
+  "name": "node-rest-server",
+  "author": "Mahmood Hosseini",
+  "version": "1.0.0",
+  "description": "Node.js REST server to mock third-party REST APIs",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^5.0.5"
+  }
+}

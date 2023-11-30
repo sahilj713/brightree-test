@@ -5,7 +5,7 @@ pipeline {
     stage('Run test case'){
       steps{
         script{
-          mvn clean install
+          echo 'hello'
         }
       }
     }

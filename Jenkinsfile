@@ -4,9 +4,7 @@ pipeline {
   stages{
     stage('Run test case'){
       steps{
-        script{
-          echo 'hello'
-        }
+        sh 'sudo mvn -DskipTests clean install'
       }
     }
   }
